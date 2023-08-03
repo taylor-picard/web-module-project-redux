@@ -7,9 +7,11 @@ import App from './components/App';
 import { BrowserRouter as Router } from 'react-router-dom';
 import './index.css';
 
+const store = createStore(reducer);
+
 ReactDOM.render(
   <Router>
-    <Provider store={createStore(reducer)}>
+    <Provider store={store}>
       <App />
     </Provider>
   </Router>,

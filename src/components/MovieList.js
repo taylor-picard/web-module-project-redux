@@ -4,17 +4,14 @@ import MovieListItem from './MovieListItem';
 import MovieFooter from './MovieFooter';
 import movies from '../data';
 
-const mapStateToProps = movies => {
+const mapStateToProps = (state) => {
     return{
-        title: movies.title,
-        director: movies.director,
-        genre: movies.genre,
-        metascore: movies.metascore
+        movies: state.movies
     }
 }
 
 const MovieList = (props)=> {
-    const movies = [{...mapStateToProps}];
+    const {movies} = props;
 
     return (
         <div className="col">
