@@ -6,7 +6,7 @@ import movies from '../data';
 
 const mapStateToProps = (state) => {
     return{
-        movies: state.movies
+        movies: state.movieReducer.movies
     }
 }
 
